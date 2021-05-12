@@ -5,8 +5,12 @@ import os
 prefix = "^"
 handy = commands.Bot(command_prefix=prefix)
 
+@handy.event
+async def on_ready():
+    print('Ready!')
+
 @handy.command()
-async def laod(ctx, extension):
+async def load(ctx, extension):
     handy.load_extension(f'cogs.{extension}')
 
 @handy.command()
