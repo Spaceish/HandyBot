@@ -8,9 +8,9 @@ class Conversions(commands.Cog):
     def __init__(self, handy):
         self.handy = handy
 
-        @commands.command()
-        async def convert(self, ctx, type, another_type, value):
-            await ctx.send(convert(type, another_type, value))
+    @commands.command()
+    async def convert(self, ctx, type, another_type, value):
+        await ctx.send(convert(type, another_type, value))
 
 def setup(handy):
     handy.add_cog(Conversions(handy))
