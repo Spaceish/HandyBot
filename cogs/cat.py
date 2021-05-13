@@ -11,7 +11,7 @@ class Cat(commands.Cog):
 
     @commands.command()
     async def cfacts(self, ctx):
-        await ctx.send(f'**Fact :** catfacts()')
+        await ctx.send(f'**Fact :** {catfacts()}')
 
 def setup(handy):
     handy.add_cog(Cat(handy))
