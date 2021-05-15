@@ -4,6 +4,7 @@ import os
 
 prefix = "^"
 handy = commands.Bot(command_prefix=prefix)
+handy.remove_command('help')
 
 @handy.event
 async def on_ready():
