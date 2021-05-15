@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 prefix = "^"
 handy = commands.Bot(command_prefix=prefix)
@@ -27,5 +30,5 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         handy.load_extension(f'cogs.{filename[:-3]}')
 
-token = "ODQyMDIwNDI2MzAxNTcxMTEy.YJvOoQ.m8Mqemq8SQCDAF75YqKLg1ofK8Y"
+token = os.getenv('TOKEN')
 handy.run(token)
